@@ -1,0 +1,39 @@
+<section id="stats" class="section">
+  <div class="section-header">
+    <p class="eyebrow">Estadísticas</p>
+    <h2>Meta y rendimiento</h2>
+    <p>Win rates por civilización y ranking de jugadores actualizados.</p>
+  </div>
+  <div class="meta-selector">
+    <label for="meta-range">Meta por ELO</label>
+    <select id="meta-range">
+      <option value="bajo">Bajo</option>
+      <option value="medio" selected>Medio</option>
+      <option value="alto">Alto</option>
+    </select>
+  </div>
+  <div class="stats-layout">
+    <div>
+      <h3>Win rate por civilización</h3>
+      <table id="winrate-table">
+        <thead>
+          <tr><th>Civilización</th><th>Win rate</th><th>Pico</th></tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+    <div>
+      <h3>Ranking de jugadores</h3>
+      <div class="tabs">
+        <button class="tab-btn active" data-mode="1v1">1v1</button>
+        <button class="tab-btn" data-mode="tg">Team Game</button>
+      </div>
+      <table id="players-table">
+        <thead>
+          <tr><th>Jugador</th><th>ELO</th><th>Estilo</th></tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </div>
+</section>
