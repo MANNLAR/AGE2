@@ -1,0 +1,35 @@
+<section id="civs" class="section">
+  <div class="section-header">
+    <p class="eyebrow">Civilizaciones</p>
+    <h2>Elige tu identidad</h2>
+    <p>Bonificaciones, estilo y builds recomendados para cada situación.</p>
+  </div>
+  <div class="filters" id="civ-filters">
+    <select id="filter-region">
+      <option value="all">Todas las regiones</option>
+      <option value="asia">Asia</option>
+      <option value="europa">Europa</option>
+      <option value="africa">África</option>
+      <option value="america">América</option>
+    </select>
+    <select id="filter-style">
+      <option value="all">Todos los estilos</option>
+      <option value="eco">Económica</option>
+      <option value="rush">Rush</option>
+      <option value="hibrida">Híbrida</option>
+    </select>
+    <select id="filter-difficulty">
+      <option value="all">Todas las dificultades</option>
+      <option value="baja">Baja</option>
+      <option value="media">Media</option>
+      <option value="alta">Alta</option>
+    </select>
+  </div>
+  <div class="grid" id="civ-grid"></div>
+  <div id="civ-modal" class="modal" aria-hidden="true">
+    <div class="modal-content">
+      <button class="icon-btn modal-close" data-close="civ-modal">×</button>
+      <div id="civ-detail"></div>
+    </div>
+  </div>
+</section>
