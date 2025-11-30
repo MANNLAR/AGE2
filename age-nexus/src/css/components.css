@@ -63,3 +63,25 @@
   object-position: center;
   display: block;
 }
+
+.card.build ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.card.build li {
+  position: relative;
+  padding-left: 1.6rem;
+  margin-bottom: 0.4rem;
+  line-height: 1.5;
+}
+
+.card.build li::before {
+  content: "•";
+  color: #d4af37;
+  font-size: 1.2rem;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
