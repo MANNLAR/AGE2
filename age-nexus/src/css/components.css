@@ -9,7 +9,7 @@
   transition: var(--transition);
 }
 .card:hover { transform: translateY(-4px); border-color: rgba(212,175,55,0.4); }
-.card-media { height: 140px; background: #0d1220; display: grid; place-items: center; font-weight: 700; letter-spacing: 1px; }
+.card-media { height: 250px; background: #0d1220; display: grid; place-items: center; font-weight: 700; letter-spacing: 1px; }
 .card-body { padding: 16px; display: grid; gap: 10px; }
 
 .accordion { display: grid; gap: 10px; }
@@ -51,17 +51,15 @@
 
 .card.team .card-media {
   width: 100%;
-  height: 300px;       /* Ajusta la altura a tu gusto */
+  height: 300px;
   overflow: hidden;
-  border-radius: 12px; /* Opcional */
+  border-radius: 12px; 
 }
 
-/* Imagen dentro de la card del equipo */
 .card.team .card-media img {
   width: 100%;
   height: 100%;
-  object-fit: cover;    /* Acomoda sin deformar */
+  object-fit: cover;
   object-position: center;
   display: block;
 }
-
