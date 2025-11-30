@@ -6,7 +6,7 @@ const CivUI = (() => {
   function renderCivCard(civ) {
     return `
       <article class="card civ-card" data-name="${civ.name}" data-id="${civ.id}" data-region="${civ.region}" data-style="${civ.style}" data-difficulty="${civ.difficulty}">
-        <div class="card-media placeholder" style="background-image:url('${civ.image}'); background-size:cover; background-position:center;">${civ.name}</div>
+        <div class="card-media placeholder" style="background-image:url('${civ.image}'); background-size:cover; background-position:center;"></div>
         <div class="card-body">
           <div class="tag">${civ.region.toUpperCase()}</div>
           <h3>${civ.name}</h3>
