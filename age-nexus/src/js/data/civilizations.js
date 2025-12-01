@@ -255,7 +255,7 @@ const CIVILIZATIONS = [
   id: "coreanos",
   name: "Coreanos",
   region: "asia",
-  style: "defensiva y naval",
+  style: ["defensiva", "naval"],
   difficulty: "media",
   image: "src/assets/civ/coreanos.png",
   recommended: "Torres baratas y arquería de montados resistente.",
@@ -299,44 +299,47 @@ const CIVILIZATIONS = [
   id: "dravidos",
   name: "Dravídicos",
   region: "asia",
-  style: "infanteria",
+  style: "infanteria y Naval",
   difficulty: "alta",
   image: "src/assets/civ/dravidicos.png",
   recommended: "Infantería barata y excelente juego acuático.",
   builds: ["Infantería", "Naval"],
   bonuses: [
     "+200 madera al avanzar de edad",
-    "Pesqueros más baratos",
-    "Arqueros a pie con bonificaciones"
+    "Pescadores y Pesqueros transportan +15 alimento.",
+    "Las tecnologías del Cuartel son 50% más baratas.",
+    "Hostigadores y Elefantes arqueros atacan un 25% más rápido.",
+    "Armas de Asedio cuestan -33% madera."
   ],
-  uniqueUnits: ["Urumi Swordsman", "Thirisadai"],
+  uniqueUnits: ["Espadachín Urumi", "Thirisadai"],
   uniqueTechs: [
-    "Medical Corps (Castillos)",
-    "Wootz Steel (Imperial)"
+    "Cuerpos de Médicos: Unidades en elefante regeneran +30 PR/minuto. (Castillos)",
+    "Acero Wootz: El ataque de la infantería y caballería ignora la armadura. (Imperial)"
   ]
 },
 {
   id: "eslavos",
   name: "Eslavos",
   region: "europa",
-  style: "infanteria",
+  style: "infanteria y asedio",
   difficulty: "media",
   image: "src/assets/civ/eslavos.png",
   recommended: "Infantería muy fuerte y asedio brutal.",
   builds: ["Asedio pesado", "Infantería"],
   bonuses: [
-    "Granjas +15% eficiencia",
-    "Infantería más fuerte",
-    "Monasterios más baratos"
+    "Las Armas de Asedio son un 15% más baratas.",
+    "Suministros y Gambesones gratis.",
+    "Los Granjeros trabajan un 15% mas rápido.",
+    "Los Monjes se mueven un 20% más rápido"
   ],
   uniqueUnits: ["Boyardo"],
   uniqueTechs: [
-    "Orthodoxy (Castillos)",
-    "Druzhina (Imperial)"
+    "Detinets: Reemplaza el 40% del coste de piedra de los Castillos y torres por madera. (Castillos)",
+    "Druzhina Las unidades de infantería dañan a los enemigos adyacentes. (Imperial)"
   ]
 },
 {
-  id: "espanoles",
+  id: "españoles",
   name: "Españoles",
   region: "europa",
   style: "hibrida",
