@@ -3,7 +3,7 @@ const CIVILIZATIONS = [
   id: "armenios",
   name: "Armenios",
   region: "asia",
-  style: "infanteria y naval",
+  style: ["infanteria", "naval"],
   difficulty: "media",
   image: "src/assets/civ/armenios.png",
   recommended: "Muy buenos contra infantería y con unidades únicas resistentes.",
@@ -25,14 +25,14 @@ const CIVILIZATIONS = [
   id: "aztecas",
   name: "Aztecas",
   region: "america",
-  style: "infanteria y monjes",
+  style: ["infanteria", "monjes"],
   difficulty: "alta",
   image: "src/assets/civ/aztecas.png",
   recommended: "Excelente rush en Feudal y Castillos, infantería muy fuerte.",
   builds: ["Driush", "Águilas FC"],
   bonuses: [
     "Aldeanos llevan +3 recursos",
-    "Unidades militares se crean un +11% más rápido",
+    "Unidades militares se crean un +15% más rápido",
     "Los monjes recibem +5PR por cada tecnología del monasterio desarollada",
     "comienzan con +50 de oro"
   ],
@@ -46,7 +46,7 @@ const CIVILIZATIONS = [
   id: "bengalies",
   name: "Bengalíes",
   region: "asia",
-  style: "elefantes y Naval",
+  style: ["elefantes", "naval"],
   difficulty: "alta",
   image: "src/assets/civ/bengalies.png",
   recommended: "Elefantes potentes y economía fuerte con aldeanos extra por edad.",
@@ -68,7 +68,7 @@ const CIVILIZATIONS = [
   id: "bereberes",
   name: "Bereberes",
   region: "africa",
-  style: "camellos y naval",
+  style: ["camellos", "naval"],
   difficulty: "media",
   image: "src/assets/civ/bereberes.png",
   recommended: "Caballería barata y camellos de élite muy fuertes.",
@@ -88,7 +88,7 @@ const CIVILIZATIONS = [
   id: "birmanos",
   name: "Birmanos",
   region: "asia",
-  style: "Monjes y Elefantes",
+  style: ["elefantes", "monjes"],
   difficulty: "media",
   image: "src/assets/civ/birmanos.png",
   recommended: "Infantería con ataque extra y monjes potentes.",
@@ -131,7 +131,7 @@ const CIVILIZATIONS = [
   id: "bohemios",
   name: "Bohemios",
   region: "europa",
-  style: "Polvora y monjes",
+  style: ["polvora", "monjes"],
   difficulty: "alta",
   image: "src/assets/civ/bohemios.png",
   recommended: "Una de las mejores civilizaciones de pólvora.",
@@ -213,7 +213,7 @@ const CIVILIZATIONS = [
   id: "celtas",
   name: "Celtas",
   region: "europa",
-  style: "infanteria",
+  style: ["infanteria", "asedio"],
   difficulty: "baja",
   image: "src/assets/civ/celtas.png",
   recommended: "Push agresivo con asedio rápido.",
@@ -299,7 +299,7 @@ const CIVILIZATIONS = [
   id: "dravidos",
   name: "Dravídicos",
   region: "asia",
-  style: "infanteria y Naval",
+  style: ["infanteria", "naval"],
   difficulty: "alta",
   image: "src/assets/civ/dravidicos.png",
   recommended: "Infantería barata y excelente juego acuático.",
@@ -321,7 +321,7 @@ const CIVILIZATIONS = [
   id: "eslavos",
   name: "Eslavos",
   region: "europa",
-  style: "infanteria y asedio",
+  style: ["infanteria", "asedio"],
   difficulty: "media",
   image: "src/assets/civ/eslavos.png",
   recommended: "Infantería muy fuerte y asedio brutal.",
@@ -342,7 +342,7 @@ const CIVILIZATIONS = [
   id: "españoles",
   name: "Españoles",
   region: "europa",
-  style: "hibrida",
+  style: ["monjes", "polvora"],
   difficulty: "media",
   image: "src/assets/civ/españoles.png",
   recommended: "Muy buenos en pólvora y conquistadores.",
@@ -362,7 +362,7 @@ const CIVILIZATIONS = [
   id: "etiopes",
   name: "Etíopes",
   region: "africa",
-  style: "arqueros",
+  style: ["arqueros", "asedio"],
   difficulty: "media",
   image: "src/assets/civ/etiopes.png",
   recommended: "Excelentes arqueros y muy buen timing de castillos.",
@@ -388,34 +388,36 @@ const CIVILIZATIONS = [
   recommended: "Una de las mejores caballerías del juego.",
   builds: ["Scout Rush", "FC Caballeros"],
   bonuses: [
-    "Caballería +20% HP",
-    "Granjas más baratas",
-    "Castillos más baratos"
+    "Las mejoras para las Granjas son gratis.",
+    "Los Castillos son un 15%/25% más baratos en la Edad de los Castillos/Imperial.",
+    "La Unidades montadas tiene +20% PR (a partir de la Edad Feudal)",
+    "Los aldeanos recogen las bayas un 15% más rápido."
   ],
   uniqueUnits: ["Lanzador de Hachas"],
   uniqueTechs: [
-    "Bearded Axe (Castillos)",
-    "Chivalry (Imperial)"
+    "Hacha de Arista: Otorga a los Lanzadores de hachas +1 de alcance. (Castillos)",
+    "Código Caballeresco: Aumenta la velocidad de trabajo de los Establos en un +40%.(Imperial)"
   ]
 },
 {
   id: "georgianos",
   name: "Georgianos",
   region: "europa",
-  style: "defensiva",
+  style: ["caballeria", "defensiva"],
   difficulty: "media",
   image: "src/assets/civ/georgianos.png",
   recommended: "Muy buena defensa con unidades únicas anti-caballería.",
   builds: ["Infantería", "Push de fortalezas"],
   bonuses: [
-    "Monjes convierten más rápido",
-    "Edificios defensivos más baratos",
-    "Infantería con armadura extra"
+    "Comienzan con una Carreta de Mulas.",
+    "Las Iglesias fortificadas proporcionan +10% de trabajo a los aldeanos en un radio de 10 casillas.",
+    "Las unidades y edificios reciben -20 % de daño (-40 % en lugar de -25 %) cuando luchan desde mayor altura",
+    "La caballería regenera 15% PV por minuto a partir de la Edad Feudal."
   ],
   uniqueUnits: ["Monaspa"],
   uniqueTechs: [
-    "Aznauri (Castillos)",
-    "Darbas (Imperial)"
+    "Torres Esvanas: Los edificio defensivos reciben +2 de ataque. El ataque de las Torres atraviesa.(Castillos)",
+    "Caballería Aznauri: Las unidades de caballería ocupan un 15% menos de espacio de población."
   ]
 },{
   id: "godos",
@@ -427,34 +429,38 @@ const CIVILIZATIONS = [
   recommended: "Spam de infantería a gran escala.",
   builds: ["Infantería masiva", "Spam de unidades"],
   bonuses: [
-    "Infantería más barata por edades",
-    "Pueden crear aldeanos en el centro de población bajo ataque",
-    "Caza más eficiente"
+    "La infantería es un 20%/25%/30%/35% más barata en la Alta Edad Media/Feudal/Castillo/Imperial.",
+    "La infantería tiene +1/+2/+3 de ataque contra edificios estándares en la Edad Feudal/Castillo/Imperial.",
+    "Los aldeanos tienen +5 de ataque contra la Caza agresiva (Jabalí, Jabalina, Elefante, Rinoceronte) y llevan +15 alimento de la caza. La caza dura 20% más.",
+    "Telar se desarrolla instantáneamente.",
+    "+10 de Población máxima en la Edad Imperial."  
   ],
-  uniqueUnits: ["Huskarle"],
+  uniqueUnits: ["Huscarle"],
   uniqueTechs: [
-    "Anarchy (Castillos)",
-    "Perfusion (Imperial)"
+    "Anarquía: Permite la creación de Huscarles en los Cuarteles. (Castillos)",
+    "Movilización: Aumenta la velocidad de trabajo de los Cuarteles en un +100%. (Imperial)"
   ]
 },
 {
   id: "gurjaras",
   name: "Gurjaras",
   region: "asia",
-  style: "caballeria",
+  style: ["caballeria", "camellos"],
   difficulty: "alta",
   image: "src/assets/civ/gurjaras.png",
   recommended: "Un meta muy flexible con unidades montadas y camellos.",
-  builds: ["Camellos", "Chakram Throwers"],
+  builds: ["explorador a camello", "Lanzador chakram", "explorador a camello"],
   bonuses: [
-    "Pueden guardar ganado en los molinos",
-    "Caballería montada más fuerte",
-    "Camellos mejorados"
+    "Comienzan el juego con un Explorador a Camello.",
+    "Comienzan con 2 Arbustos de Bayas bajo el Centro Urbano.",
+    "Pueden guarecer los Molinos con Ganado para producir comida.",
+    "Las unidades montadas hacen un +20%/+30%/+40% daño adicional en la Edad Fedual/Castillos/Imperial.",
+    "Pueden guarecer los Muelles con Pesqueros."
   ],
   uniqueUnits: ["Chakram Thrower", "Shrivamsha Rider"],
   uniqueTechs: [
-    "Kshatriyas (Castillos)",
-    "Frontier Guards (Imperial)"
+    "Chatrias: Las unidades militares cuestan -25% comida (Castillos)",
+    "Guardias Fronterizos: Jinetes a camello y Arqueros en Elefante obtienen +4 de armadura cuerpo a cuerpo. (Imperial)"
   ]
 },
 {
@@ -467,74 +473,78 @@ const CIVILIZATIONS = [
   recommended: "El rush más agresivo con caballería ligera y arqueros.",
   builds: ["Scout Rush", "CA Rush"],
   bonuses: [
-    "No necesitan casas",
-    "Caballería más barata",
-    "Talleres de asedio más rápidos"
+    "Comienzan con -100 madera, pero su límite de población está al máximo.",
+    "En mapas nómadas, el primer Centro Urbano crea un caballo explorador.",
+    "Los Arqueros a caballo son 10%/20% más baratos en la Edad de los Castillos/Imperial.",
+    "Los Lanzapiedras son un 35% más precisos contra unidades."
   ],
   uniqueUnits: ["Tarquino"],
   uniqueTechs: [
-    "Marauders (Castillos)",
-    "Atheism (Imperial)"
+    "Razias: Los tarcanos se pueden crear en el Establo.(Castillos)",
+    "Ateísmo: Las victorias por Maravilla o reliquias +100 años y reduce la generación de recursos por Reliquia enemiga en un 50%. (Imperial)"
   ]
 },
 {
   id: "incas",
   name: "Incas",
   region: "america",
-  style: "hibrida",
+  style: "infanteria",
   difficulty: "media",
   image: "src/assets/civ/incas.png",
   recommended: "Muy versátiles, grandes defensas y buenos pike-men.",
   builds: ["Torre Rush", "Infantería"],
   bonuses: [
-    "Aldeanos afectados por mejoras de infantería",
-    "Edificios más baratos",
-    "Unidades anti-caballería más fuertes"
+    "AUnidades militares cuestan -10%/-15%/-20%/-25% alimento en Alta Edad Media/Feudal/Castillos/Imperial.",
+    "Las mejoras de la infantería en la Herrería afectan a los aldeanos a partir de la Edad de los Castillos.",
+    "Las casas admiten 10 de población.",
+    "Los edificios cuestan un -15% piedra."
   ],
-  uniqueUnits: ["Kamayuk", "Slinger"],
+  uniqueUnits: ["Kamayuk", "hondero"],
   uniqueTechs: [
-    "Andean Sling (Castillos)",
-    "Fabric Shields (Imperial)"
+    "Huaracas: Los Honderos +1 ataque y remueve el alacance mínimo de los Hostigadores y Honderos. (Castillos)",
+    "Escudos de Tela: Los Kamayuks, los Honderos y los Guerreros Águilas obtienen +1/+2 de armadura. (Imperial)"
   ]
 },
 {
   id: "indostanos",
   name: "Indostanos",
   region: "asia",
-  style: "caballeria",
+  style: ["caballeria", "polvora"],
   difficulty: "alta",
   image: "src/assets/civ/indostanos.png",
   recommended: "Una de las mejores economías del juego y camellos élite.",
   builds: ["Camellos", "Boom"],
   bonuses: [
-    "Aldeanos más baratos",
-    "Camellos más fuertes",
-    "Pólvora más efectiva"
+    "Los aldeanos cuestan -8/-13/-18/-23% alimento en la Alta Edad Media/Feudal/Castillos/Imperial.",
+    "Los camellos atacan un 20% más rápido.",
+    "Unidades de pólvora +1/+1 de armadura/anti-proyectiles.",
+    "Pueden construir Caravanserai en la Edad Imperial."
   ],
-  uniqueUnits: ["Ghulam"],
+  uniqueUnits: ["Ghulam", "jinete de camello imperial"],
   uniqueTechs: [
-    "Grand Trunk Road (Castillos)",
-    "Shatagni (Imperial)"
+    "Camino del Gran Tronco: Toda forma de obtención de oro es de 10% más rápida (Minería, Reliquias, y Comercio). Tarifa comercial reducida al 10%.(Castillos)",
+    "Shatagni: Los artilleros manuales obtienen +2 de alcance. (Imperial)"
   ]
 },
 {
   id: "italianos",
   name: "Italianos",
   region: "europa",
-  style: "arqueros",
+  style: ["arqueros", "naval"],
   difficulty: "media",
   image: "src/assets/civ/italianos.png",
   recommended: "Muy fuertes en mapas de agua y arquería.",
   builds: ["Arqueros", "Naval"],
   bonuses: [
-    "Subir de edad más barato",
-    "Tecnologías de universidad más baratas",
-    "Galeones baratos"
+    "Avanzar a la siguiente edad cuesta un 15% más barato.",
+    "Las tecnologías del muelle y de la Universidad cuestan un -33%",
+    "Los Pesqueros cuestan un -15%.",
+    "Las unidades de pólvora cuestan un -20%"
   ],
-  uniqueUnits: ["Génova Arquero", "Condotiero"],
+  uniqueUnits: ["Génova Ballestero", "Condotiero"],
   uniqueTechs: [
-    "Pavise (Castillos)",
-    "Silk Road (Imperial)"
+    "Escudo Pavés: Los arqueros a pie y Condotieros reciben +1/+1 armadura. (Castillos)",
+    "Ruta de la Seda: Carreta de Mercancías y Urca Mercante cuestan -50%. (Imperial)"
   ]
 },
 {
@@ -547,74 +557,79 @@ const CIVILIZATIONS = [
   recommended: "Excelente infantería y juego de pesca.",
   builds: ["Infantería", "Feudal agresivo"],
   bonuses: [
-    "Pescadores más eficientes",
-    "Edificios de molino/mina trabajan más rápido",
-    "Infantería ataca más rápido"
+    "Pesqueros tienen el doble de PR, +2 de armadura anti-proyectil y trabajan un 5%/10%/15%/20% más rápido en la Alta Edad Media/Feudal/Castillos/Imperial.",
+    "Molinos, campamentos madereros y mineros son un 50% más baratos.",
+    "La infantería ataca un 33% más rápido desde la Edad Feudal."
   ],
   uniqueUnits: ["Samurái"],
   uniqueTechs: [
-    "Yasama (Castillos)",
-    "Kataparuto (Imperial)"
+    "Yasama: Otorga flechas adicionales a las torres. (Castillos)",
+    "Kataparuto: Hace que los Lanzapiedras se empaqueten, se armen y disparen más rápido. (Imperial)"
   ]
 },
 {
   id: "jemeres",
   name: "Jemeres",
   region: "asia",
-  style: "hibrida",
+  style: ["elefantes","asedio"],
   difficulty: "baja",
   image: "src/assets/civ/jemeres.png",
   recommended: "Boom fácil y elefantes muy fuertes.",
   builds: ["Elefantes", "Boom sin requisitos"],
   bonuses: [
     "No requieren edificios para avanzar de edad",
-    "Aldeanos pueden entrar a granjas sin casas",
-    "Elefantes más rápidos"
+    "Los Elefantes de combate son un 15% más rápido.",
+    "Los aldeanos se pueden guarecer en las Casas",
+    "Los aldeanos no necesitan depositar el alimento de las Granjas, pero trabajan un 3% más lento."
   ],
-  uniqueUnits: ["Ballestero Montado"],
+  uniqueUnits: ["Elefante con  ballesta"],
   uniqueTechs: [
-    "Tusk Swords (Castillos)",
-    "Double Crossbow (Imperial)"
+    "Colmillos de Acero: Otorga a los Elefantes de combate +3 de ataque. (Castillos)",
+    "Doble Ballesta: Los Escorpiones y Elefantes con ballesta disparan un segundo proyectil.(Imperial)"
   ]
 },
 {
   id: "jurchens",
   name: "Jurchens",
   region: "asia",
-  style: "caballeria",
+  style: ["caballeria", "polvora"],
   difficulty: "media",
   image: "src/assets/civ/jurchens.png",
   recommended: "Caballería pesada y arquería montada estable.",
   builds: ["Caballería", "CA"],
   bonuses: [
-    "Bonificaciones contra caballería",
-    "Economía estable con bonificación de pastizales",
-    "Caballería resistente"
+    "La carne de caza y el ganado no se descompone.",
+    "Las unidades montadas y los Lanceros Incendiarios atacan +20% más rápido a partir de la Edad Fedual.",
+    "Los Ingenieros de Asedio están dispoibles en la Edad de los Castillos.",
+    "Las mejoras de asedio y fortificaciones cuestan -75% de madera y se desarrollan +100% más rápido.",
+    "Las unidades reciben -50% de daño por fuego aliado."
   ],
-  uniqueUnits: ["Rattan Mounted Archer"],
+  uniqueUnits: ["Pagoda de hierro", "granadero"],
   uniqueTechs: [
-    "Steppe Diplomacy (Castillos)",
-    "Northern Riders (Imperial)"
+    " Bastiones Fortificados: Las fortificaciones regenran 500 PV por minuto. (Castillos)",
+    "Bombas de Trueno: Carretas de Cohetes, Granaderos y Lou Chuans explotan al ser derrotados, los proyectiles producen explosiones adicionales. (Imperial)"
   ]
 },
 {
   id: "kitan",
   name: "Kitán",
   region: "asia",
-  style: "arqueros",
+  style: ["caballeria","infanteria"],
   difficulty: "media",
   image: "src/assets/civ/kitan.png",
   recommended: "Arquería montada resistente y presión constante.",
   builds: ["CA", "Skirm Rush"],
   bonuses: [
-    "Unidades a distancia más rápidas",
-    "Monjes más baratos",
-    "Arquería montada con resistencia extra"
+    "Las Pasturas reemplazan a las granjas.",
+    "Los pastores generan +10% de alimento adicional.",
+    "Los efectos de mejora de ataques cuerpo a cuerpo se duplican.",
+    "Hostigadores, lanceros y la línea de caballería de exploración entrenan y mejoran +25% más rápido.",
+    "Mejora de Caballería Pesada de Arqueros disponible en la Edad de los Castillos y cuesta -50%."
   ],
-  uniqueUnits: ["Khitai Horse Archer"],
+  uniqueUnits: ["Liao Dao", "trebuchet montado"],
   uniqueTechs: [
-    "Steppe Arrows (Castillos)",
-    "Grand Hunt (Imperial)"
+    "Armadura Laminar: Infantería y Hostigadores reflejan 25% de daño cuerpo a cuerpo al atacante. (Castillos)",
+    "Caballería Ordo: La Caballería regenera PV en combate. (Imperial)"
   ]
 },
 // 31–40
@@ -622,18 +637,20 @@ const CIVILIZATIONS = [
   id: "lituanos",
   name: "Lituanos",
   region: "europa",
-  style: "caballeria",
+  style: ["caballeria", "monjes"],
   difficulty: "media",
   image: "src/assets/civ/lituanos.png",
   recommended: "Civilización flexible con caballería fuerte y reliquias que potencian mucho su late game.",
   bonuses: [
-    "+150 de comida inicial.",
+    "Consiguen +100 de comida por cada centro urbano construido.",
     "Cada reliquia otorga +1 de ataque a la Caballería (hasta +4).",
-    "Escaramuzadores de Élite con +2 de armadura pierce.",
-    "Monasterios trabajan un 20% más rápido."
+    "Lanceros y Guerrilleros se mueven 10% más rápido.",
   ],
   uniqueUnits: ["Leitis"],
-  uniqueTechs: ["Hill Forts", "Towershields"],
+  uniqueTechs: [
+    "Hill Forts: los centros urbanos obtienen +3 de rango(castillos)", 
+    "Towershields: los piqueros y ostigadores ganan +2 de armadura anti penetracion(imperial)"
+  ],
   builds: ["Scout Rush", "Knight Rush", "Relic Play", "Fast Castle"],
 },
 
@@ -646,13 +663,14 @@ const CIVILIZATIONS = [
   image: "src/assets/civ/magiares.png",
   recommended: "Excelentes para rush y para juego agresivo basado en caballería.",
   bonuses: [
-    "Forja gratis al pasar a Edad Feudal.",
-    "Maestranza gratis en Edad de Castillos.",
-    "Arqueros a caballo 10% más baratos (Feudal), 15% (Castillos), 20% (Imperial).",
-    "Escaramuzadores +1 pierce armor."
+    "Los Aldeanos matan a los animales salvajes de un solo golpe.",
+    "Forja, Fundición de Hierro y Alto Horno son gratis.",
+    "Caballería de Exploración y subsiguientes son un 10% más baratos.",
   ],
   uniqueUnits: ["Huszar Magiar"],
-  uniqueTechs: ["Recurve Bow", "Corvinian Army"],
+  uniqueTechs: [
+    "Ejército Corviniano: El Huszár Magiar no cuesta oro.(castillos)", 
+    "Arco Recurvo: Los arqueros a caballo tienen +1 de alcance.(imperial)"],
   builds: ["Scout Rush", "Knight Rush", "Hussar Spam"],
 },
 
@@ -660,18 +678,20 @@ const CIVILIZATIONS = [
   id: "malayos",
   name: "Malayos",
   region: "asia",
-  style: "hibrida",
+  style: "naval",
   difficulty: "alta",
   image: "src/assets/civ/malayos.png",
   recommended: "Civilización muy técnica de economía rápida y poder naval fuerte.",
   bonuses: [
     "Avanzan de edad 66% más rápido.",
-    "Pescadores trabajan 30% más rápido.",
-    "Las casas dan +10 de población.",
-    "Las unidades navales cuestan 33% menos."
+    "Pescadores trabajan 33% más rápido.",
+    "Las Trampas para peces proveen 3 veces más alimento (2145 alimento).",
+    "Los Elefantes de Combate son un 30% más baratos.."
   ],
   uniqueUnits: ["Karambit Warrior"],
-  uniqueTechs: ["Thalassocracy", "Forced Levy"],
+  uniqueTechs: [
+    "Talasocracia: Mejora los Muelles a Puertos, que disparan flechas.(castillos)",
+     "Leva en Masa: La Milicia y subsiguientes cambian su coste de oro por alimento.(imperial)"],
   builds: ["Fast Feudal", "Water Control", "Karambit Flood"],
 },
 
@@ -685,12 +705,14 @@ const CIVILIZATIONS = [
   recommended: "Infantería resistente y buena flexibilidad económica.",
   bonuses: [
     "Edificios cuestan 15% menos madera.",
-    "Infantería +1 pierce armor por edad (hasta +3).",
+    "Las unidades del Cuartel obtienen +1/+2/+3 de armadura anti-proyectil en la edad Feudal/Castillos/Imperial.",
     "Minas dan +15% oro.",
-    "Universidad trabaja 80% más rápido."
   ],
   uniqueUnits: ["Gbeto"],
-  uniqueTechs: ["Farimba", "Tigui"],
+  uniqueTechs: [
+    "Gran Asamblea: El Centro Urbano dispara flechas sin necesidad de que las unidades se guarezcan.(castillos)",
+    "Farimba: Unidades de Caballería obtienen +5 de ataque.(imperial)"
+    ],
   builds: ["Fast Castle", "Infantry Push", "Knight Rush"],
 },
 
@@ -703,13 +725,16 @@ const CIVILIZATIONS = [
   image: "src/assets/civ/mayas.png",
   recommended: "Probablemente los mejores arqueros del juego. Economía eficiente.",
   bonuses: [
-    "Recursos duran 15% más.",
-    "Arqueros cuestan 10% menos (Feudal), 20% (Castillos), 30% (Imperial).",
-    "Empiezan con +1 aldeano, -50 comida.",
-    "Murallas más baratas."
+    "RComienzan con un Explorador Águila.",
+    "AEmpiezan con un aldeano adicional, pero -50 alimento.",
+    "Los recursos naturales tardan un 15% más en agotarse.",
+    "Las unidades de arqueros (excepto Hostigadores) cuestan -10%/-20%/-30% en la Edad Feudal/Castillos/Imperial."
   ],
   uniqueUnits: ["Plumed Archer"],
-  uniqueTechs: ["Eldorado", "Hul'che Javelineers"],
+  uniqueTechs: [
+    "Jabalineros Hul'che: Otorga a los Hostigadores un segundo proyectil.(castillos)", 
+    "El Dorado: Los Guerreros Águila obtienen +40 PR.(imperial)"
+  ],
   builds: ["Archer Rush", "Plumed Archer Boom"],
 },
 
@@ -722,13 +747,15 @@ const CIVILIZATIONS = [
   image: "src/assets/civ/mongoles.png",
   recommended: "Los mejores arqueros a caballo del juego. Muy agresivos.",
   bonuses: [
-    "Cazadores trabajan 50% más rápido.",
-    "Arqueros a Caballo disparan 25% más rápido.",
-    "Mangudai eficientes contra maquinaria.",
-    "Caballería ligera +30% HP."
+    "Los cazadores trabajan un 40% más rápido.",
+    "La Caballería Ligera, Húsar, y Lancero estepario tienen un +30% de puntos de resistencia.",
+    "La Caballería de Arqueros, Caballería Pesada de Arqueros y los Mangudai disparan un +25% más rápido.",
   ],
   uniqueUnits: ["Mangudai"],
-  uniqueTechs: ["Drill", "Nomads"],
+  uniqueTechs: [
+    "Nómadas: Las casas mantienen su población si han sido destruidas.(castillos)", 
+    "Instrucción Militar: Aumenta la velocidad de movimiento de las Armas de Asedio en un +50%.(imperial)"
+  ],
   builds: ["Scout Rush", "Archer Cavalry Spam", "Mangudai Boom"],
 },
 
@@ -741,13 +768,16 @@ const CIVILIZATIONS = [
   image: "src/assets/civ/persas.png",
   recommended: "Excelente economía y elefantes extremadamente poderosos.",
   bonuses: [
-    "+50 comida y oro inicial.",
-    "Centro urbano y muelle trabajan 10% más rápido (Feudal), 15% (Castillos), 20% (Imperial).",
-    "Caballería tiene +1 ataque vs arqueros.",
-    "Elefante de guerra muy poderoso."
+    "+50 alimento, +50 madera al inicio del juego.",
+    "Centro Urbano y Muelle tienen el doble de PR y trabajan un 5%/10%/15%/20% más rápido en la Alta Edad Media/Feudal/Castillos/Imperial.",
+    "Tácticas de los Partos disponible en la Edad de los Castillos.",
+    "Unidades montadas obtienen 5 oro por cada unidad militar asesinada",
+    "Pueden construir Caravanserai en la Edad Imperial."
   ],
   uniqueUnits: ["War Elephant"],
-  uniqueTechs: ["Boiling Oil", "Mahouts"],
+  uniqueTechs: [
+    "Kamandaran: El coste en oro del arquero y subsiguientes es remplazado por madera.(castillos)", 
+    "Ciudadelas: Los Castillos +4 de ataque, +3 contra Ariete, +3 contra Infantería y reciben -25% de daño adicional.(imperial)"],
   builds: ["Fast Castle", "Knight Rush", "Elephant Push"],
 },
 
@@ -760,13 +790,15 @@ const CIVILIZATIONS = [
   image: "src/assets/civ/polacos.png",
   recommended: "Gran economía mediante las arboledas y caballería barata.",
   bonuses: [
-    "Aldeanos regeneran HP.",
-    "Caballería ligera y escaramuzadores en establo.",
-    "Caballería cuesta -20% oro.",
-    "Folwarks reemplazan molinos y dan comida adicional."
+    "Los Aldeanos regeneran 5/10/15/20 PR por minuto en la Alta Edad Media/Feudal/Castillos/Imperial. En partidas Nómadas, la bonificación sólo afecta si el Centro Urbano ha sido construido o si se comienza en la Edad de los Castillos en adelante. También afecta a los aldeanos guarecidos, aumentando su velocidad de curación (la curación base es 6 PR/minuto).",
+    "El Folwark reemplaza al Molino.",
+    "El Folwark reemplaza al Molino.",
   ],
   uniqueUnits: ["Obuch"],
-  uniqueTechs: ["Szlachta Privileges", "Lechitic Legacy"],
+  uniqueTechs: [
+    "Privilegios de Szlachta: Jinete y subsiguientes cuestan -60% oro.(castillos)", 
+    "Legado Lequítico: Caballería de Exploración y subsiguientes hacen Daño arrollador.(imperial)"
+  ],
   builds: ["Scout Rush", "Knight Spam", "Obuch Push"],
 },
 
@@ -774,18 +806,21 @@ const CIVILIZATIONS = [
   id: "portugueses",
   name: "Portugueses",
   region: "europa",
-  style: "naval",
+  style: ["naval", "polvora"],
   difficulty: "alta",
   image: "src/assets/civ/portugueses.png",
   recommended: "Naval fuerte y unidades únicas multipropósito.",
   bonuses: [
     "Todas las unidades cuestan -20% oro.",
     "Barcos con +10% HP.",
-    "Mejoras de ballesta más baratas.",
-    "Tecnologías de universidad 30% más baratas."
+    "Factoria disponible en imperial.",
+    "Los recolectores generan madera además de alimento (0.33 madera por alimento)."
   ],
-  uniqueUnits: ["Organ Gun", "Caravel"],
-  uniqueTechs: ["Carrack", "Arquebus"],
+  uniqueUnits: ["Cañon de salvas", "Caravela"],
+  uniqueTechs: [
+    "Carracas: Otorga a los barcos +1/+1 de armadura.(castillos)", 
+    "Arcabuz: Las unidades de pólvora tienen mayor precisión sobre los objetivos en movimiento."
+  ],
   builds: ["Water Boom", "Organ Gun Push", "Fast Castle"],
 },
 
@@ -798,32 +833,39 @@ const CIVILIZATIONS = [
   image: "src/assets/civ/romanos.png",
   recommended: "Infantería reforzada y economía sólida. Nueva civ del DLC.",
   bonuses: [
-    "Infantería cuesta 10% menos (Feudal), 15% (Castillos), 20% (Imperial).",
-    "Edificios militares +50% HP.",
-    "Aldeanos construyen 10% más rápido.",
-    "Monjes +1 armadura cuerpo a cuerpo."
+    "Galera de Guerra +1/+1 de armadura, Galera y Dromones +2/+2 de armadura",
+    "Infantería recibe el doble de efecto de las mejoras de armadura de la Herrería",
+    "Aldeanos recolectan, construyen y reparan un 5% más rápido",
+    "Línea de Galera +1 de ataque",
+    "Escorpiones cuestan -60% oro y se benefician de Balística"
   ],
-  uniqueUnits: ["Legionary"],
-  uniqueTechs: ["Centurion", "Ballistaria"],
+  uniqueUnits: ["Legionary", "centurion"],
+  uniqueTechs: [
+    "Balistas: Escorpión y Línea de Galera disparan 33% más rápido.(castillos)", 
+    "Comitatenses: Línea de Milicia, línea de Jinete y Centuriones se crean un 50% más rápido y reciben ataque de carga.(imperial)"
+  ],
   builds: ["Infantry Push", "Fast Castle", "Mixed Army"],
 },
-// 41–50
 {
   id: "sarracenos",
   name: "Sarracenos",
-  region: "medio_oriente",
-  style: "arqueros",
+  region: "asia",
+  style: ["naval","camellos"],
   difficulty: "media",
   image: "src/assets/civ/sarracenos.png",
   recommended: "Fuerte juego de arqueros y control del mercado. Excelente para estrategias de presión temprana.",
   bonuses: [
-    "Mercado con tarifas mucho más favorables.",
-    "Arqueros a caballo +10 HP.",
-    "Barcos de transporte con capacidad duplicada.",
-    "Arqueros a caballo generan +50% de daño extra a edificios."
+    "La tasa del Mercado es sólo del 5%.",
+    "Mercado cuesta 75 madera.",
+    "Los Barcos de Transporte tienen el doble de PR y pueden llevar +5 unidades.",
+    "Las Galeras atacan un 25% más rápido.",
+    "Las unidades de la Galería de tiro con arco (excepto el Hostigador y el Artillero Manual) tienen +1/+2/+3 de ataque contra edificios estándares en la Edad Feudal/Castillos/Imperial.",
   ],
   uniqueUnits: ["Mameluco"],
-  uniqueTechs: ["Zealotry", "Counterweights"],
+  uniqueTechs: [
+    "Fanatismo: Otorga a las unidades en camello +20 PR.(castillos)", 
+    "Contrapesos: Lanzapiedras y Manganas +15% de ataque.(imperial)"
+  ],
   builds: ["Market Abuse", "Fast Castle", "Camel Archers"],
 },
 
@@ -831,18 +873,21 @@ const CIVILIZATIONS = [
   id: "shu",
   name: "Shu",
   region: "asia",
-  style: "infanteria",
+  style: ["arqueros", "asedio"],
   difficulty: "media",
   image: "src/assets/civ/shu.png",
   recommended: "Civilización del DLC lords of the west 2024. Enfocados en infantería resistente y asedio eficiente.",
   bonuses: [
-    "Infantería +1 de ataque contra estructuras.",
-    "Monjes convierten maquinaria más rápido.",
-    "Ganadería más barata.",
+    "Los leñadores generan comida adicional, además de madera.",
+    "Las tecnologías de arqueroas de la galeria de tiro con arco y del herrrero cuestan 25% menos.",
+    "Las armas de asedio y los barcos de guerra de asedio semueven un 10% o 15% más rápido en la edad de los castillos o la edad imperial",
     "Centros urbanos disparan +1 proyectil."
   ],
-  uniqueUnits: ["Tiger Guard"],
-  uniqueTechs: ["Imperial Registers", "Warrior Monks"],
+  uniqueUnits: ["Guardia de la pluma blanca", "carro de guerra", "liu bei"],
+  uniqueTechs: [
+    "Arsenal de la serpiente enroscada: la linea de lanceros y los guardias de la pluma blanca obtienen PR adicionales cuando están cerca los unos de los otros.(castillos)", 
+    "Cargador: La linea de arqueros, los carros de guerra y las unidades de lou Chuan disparan proyectiles adicionales"
+  ],
   builds: ["Infantry Push", "Fast Castle", "Siege Follow-up"],
 },
 
@@ -855,32 +900,37 @@ const CIVILIZATIONS = [
   image: "src/assets/civ/sicilianos.png",
   recommended: "Infantería muy resistente, donjons y caballería poderosa en late game.",
   bonuses: [
-    "Reciben 50% menos daño bonus.",
-    "Donjons disponibles en Feudal.",
-    "Granjeros trabajan 100% más rápido.",
-    "Caballeros +1/+2 armadura en edades avanzadas."
+    "Castillos y Centros Urbanos se construyen un 100% más rápido.",
+    "Unidades militares terrestres absorben el 33% de todo daño adicional.",
+    "Cada mejora del molino otorga a los Granjeros +1 de capacidad.",
+
   ],
   uniqueUnits: ["Serjeant"],
-  uniqueTechs: ["First Crusade", "Scutage"],
+  uniqueTechs: [
+    "Primera Cruzada: Aparecen 7 sargentos de cada uno de tus centros urbanos (hasta un máximo de 5) y aumenta la resistencia a la conversión de todas las unidades.(castillos)", 
+    "Cota de Malla: Jinete y subsiguientes +1/+2 de armadura.(imperial)"
+  ],
   builds: ["Serjeant Rush", "Fast Castle", "Knight Power"],
 },
 
 {
-  id: "tataros",
-  name: "Tátaros",
+  id: "tartaros",
+  name: "Tártaros",
   region: "asia",
   style: "caballeria",
   difficulty: "media",
   image: "src/assets/civ/tataros.png",
   recommended: "Excelentes con caballería de arqueros, trabajan mejor en terreno elevado.",
   bonuses: [
-    "Unidades tienen +50% de daño desde colina.",
-    "Caballos obtienen +2 flechas adicionales al avanzar.",
-    "Animales cazados proporcionan +50% comida.",
-    "Arquero a caballo +1 rango en Imperial."
+    "El ganado contiene +50% alimento.",
+    "Las unidades hacen +50% de daño por elevación (+25% es daño por elevación regular).",
+    "Dactilera y Tácticas de los Partos gratis.",
   ],
-  uniqueUnits: ["Keshik", "Flaming Camel"],
-  uniqueTechs: ["Silk Armor", "Timurid Siegecraft"],
+  uniqueUnits: ["Keshik", "Camello llameante"],
+  uniqueTechs: [
+    "Armadura de Seda: +1 de armadura anti-proyectil para Caballería Ligera, Lanceros esteparios y Caballería de Arqueros(castillos)", 
+    "Tácticas de Asedio Timúridas: Lanzapiedras obtienen +2 de alcance.(imperial)"
+  ],
   builds: ["Cavalry Archer Boom", "Keshik Spam", "Hills Control"],
 },
 
@@ -893,33 +943,41 @@ const CIVILIZATIONS = [
   image: "src/assets/civ/teutones.png",
   recommended: "Defensivos con infantería extremadamente fuerte y caballería de élite.",
   bonuses: [
-    "Monjes tienen +1 rango de conversión por edad.",
-    "Cuarteles y establos más baratos.",
-    "Torres y castillos con mayor rango.",
-    "Gran resistencia contra conversiones."
+    "Las granjas cuestan un 40% menos.",
+    "Las torres pueden guarecer el doble de unidades",
+    "Matacanes y Hierbas Medicinales gratis",
+    "El Centro Urbano puede guarecer + 10 unidades.",
+    "Los monjes pueden curar dos veces más lejos.",
+    "Unidades del Cuartel y del Establo reciben +1 de armadura en la Edad de los Castillos y +1 en la Edad Imperial."
   ],
-  uniqueUnits: ["Teutonic Knight"],
-  uniqueTechs: ["Ironclad", "Crenellations"],
+  uniqueUnits: ["Caballero teutonico"],
+  uniqueTechs: [
+    "Blindaje: Armas de asedio tienen +3 de armadura.(castillos)", 
+    "Almenas: +3 alcance de castillos; infantería guarecida dispara flechas.(imperial)"
+  ],
   builds: ["Infantry Push", "Castle Drop", "Boom Defensivo"],
 },
 
 {
   id: "turcos",
   name: "Turcos",
-  region: "medio_oriente",
-  style: "gunpowder",
+  region: "asia",
+  style: "polvora",
   difficulty: "alta",
   image: "src/assets/civ/turcos.png",
   recommended: "Los mejores cañones y pólvora del juego. Excelente late game.",
   bonuses: [
     "Unidades de pólvora +25% HP.",
-    "Tecnologías de pólvora más baratas.",
-    "Minado de oro 20% más rápido.",
-    "Camellos y Hussares gratuitos en Imperial."
+    "Las tecnologías de pólvora son 50% más baratas.",
+    "Química gratis.",
+    "Los minadores trabajan un 20% más rápido.",
+    "La mejora a Caballería Ligera y Húsar son gratis."
   ],
-  uniqueUnits: ["Janissary"],
-  uniqueTechs: ["Sipahi", "Artillery"],
-  builds: ["Fast Imp", "Gunpowder Push", "Janissary Rush"],
+  uniqueUnits: ["Jenízaro"],
+  uniqueTechs: [
+    "Sipahi: Otorga a la Caballería de Arqueros +20 de PR.(castillos)", 
+    "Artillería: Otorga a los cañones de asedio, galeones artillados y Torres de Bombardeo +2 de alcance.(artilleria)"],
+  builds: ["Fast Imp", "Gunpowder Push", "Jenízaro"],
 },
 
 {
@@ -932,12 +990,15 @@ const CIVILIZATIONS = [
   recommended: "Arqueros de élite y economía basada en información del enemigo.",
   bonuses: [
     "Revelas la posición de los enemigos desde el inicio.",
-    "Unidades de arqueros tienen +1/+2 HP por edad.",
-    "Impulso económico por aldeanos más baratos.",
-    "Elefantes de arqueros disponibles."
+    "Las unidades de la Galería de tiro con arco tienen +20% PR.",
+    "Leva gratis.",
+    "Las mejoras económicas no cuestan madera."
   ],
-  uniqueUnits: ["Rattan Archer"],
-  uniqueTechs: ["Chatras", "Paper Money"],
+  uniqueUnits: ["Arquero de ratán", "hostigador imperial"],
+  uniqueTechs: [
+    "Chatras: Otorga a los Elefante de Combate +50 PR.(castillos)", 
+    "Papel Moneda: Los aldeanos producen oro además de madera.(imperial)"
+  ],
   builds: ["Archer Rush", "Rattan Push", "Fast Castle"],
 },
 
@@ -945,18 +1006,20 @@ const CIVILIZATIONS = [
   id: "vikingos",
   name: "Vikingos",
   region: "europa",
-  style: "naval",
+  style: ["naval", "infanteria"],
   difficulty: "alta",
   image: "src/assets/civ/vikingos.png",
   recommended: "Fuerte economía y dominio naval temprano.",
   bonuses: [
-    "Infantería más barata (-15/ -20/ -25%).",
-    "Barcos de guerra +20% HP.",
-    "Carretilla y carreta gratis.",
-    "Docas más baratas."
+    "La infantería tiene +10%/+15%/+20% PR en la Edad Feudal/Castillos/Imperial.",
+    "Los barcos de guerra son un 15%/15%/20% más baratos en la Edad Feudal/Castillos/Imperial.",
+    "Carretilla y Carro de Mano gratis.",
   ],
-  uniqueUnits: ["Berserk", "Longboat"],
-  uniqueTechs: ["Chieftains", "Berserkergang"],
+  uniqueUnits: ["Berserk", "drakkar"],
+  uniqueTechs: [
+    "Hérsires: Otorga a la infantería +5 de ataque contra caballería y +4 de ataque contra camellos.(castillos)", 
+    "Trance Frenético: Aumenta la velocidad de regeneración de los Berserkers.(imperial)"
+  ],
   builds: ["Water Control", "Fast Castle", "Berserk Push"],
 },
 
@@ -969,13 +1032,15 @@ const CIVILIZATIONS = [
   image: "src/assets/civ/wei.png",
   recommended: "Civilización del DLC Dynasties of China. Caballería móvil y economía de pastos.",
   bonuses: [
-    "Granjas generan comida extra periódicamente.",
-    "Caballería +1 de armadura.",
-    "Los establos trabajan 20% más rápido.",
-    "Arqueros montados más baratos."
+    "Recibe un aldeano gratis por cada mejora de economía investigada",
+    "La caballería de Hei Guang y el saqueador Xianbei obienen un 20/30 %  más de PR en la edad de los castillos y en la edad imperial resprectivamente.",
+    "Los mangoneles y las unidades de Losu Chuan cuestan  un 25% menos"
   ],
-  uniqueUnits: ["Tiger Knight"],
-  uniqueTechs: ["Imperial Examinations", "Heavenly Cavalry"],
+  uniqueUnits: ["Caballería tigresa", "Saqueador Xianbei", "Cao Cao"],
+  uniqueTechs: [
+    "Tuntian: Los soldados producen alimentos de forma pasiva.(castillos)", 
+    "Armadura de Ming Guang: las unidades montadas obtienen +4 de armadura cuerpo a cuerpo.(imperial)"
+  ],
   builds: ["Knight Rush", "Fast Castle", "Mounted Archers"],
 },
 
@@ -983,18 +1048,21 @@ const CIVILIZATIONS = [
   id: "wu",
   name: "Wu",
   region: "asia",
-  style: "hibrida",
+  style: ["infanteria", "naval"],
   difficulty: "media",
   image: "src/assets/civ/wu.png",
   recommended: "Civilización versátil del DLC Dynasties of China con buen equilibrio militar.",
   bonuses: [
-    "Granjas 10% más baratas.",
-    "Mejoras de herrería 25% más baratas.",
-    "Edificios militares construidos 20% más rápido.",
-    "Barcos de fuego +1 rango."
+    "Los muelles y los edificios de producción militar proporcionan +65 de comida",
+    "La infantería se regenera 10/20/30 PR por minuto en la Edad Feudal, de los Castillos o Imperial",
+    "Los espadachines de Jian y la caballería de Hei Guang obtienen +2 de ataque en la Edad Imperial",
+    "Carenado y Dique seco están disponibles una edad antes, y su coste y tiempo de investigación se reducen un 75 %"
   ],
-  uniqueUnits: ["Tiger Archer"],
-  uniqueTechs: ["Imperial Bureaucracy", "Yangtze Armor"],
+  uniqueUnits: ["Arquero de fuego", "espadachín de jian, Sun Juan"],
+  uniqueTechs: [
+    "Tácticas de los acantilados rojos: Los barcos de demolición y los arqueros de fuego infligen daño por fuego a los barcos y edificios", 
+    "Tigre sentado: Los mangoneles y los trebuchets de Lou Chuan disparan proyectiles adicionales"
+  ],
   builds: ["Archer Rush", "Fast Castle", "Mixed Composition"],
 }
 ];
