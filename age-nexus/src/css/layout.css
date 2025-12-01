@@ -57,6 +57,12 @@
 
 .team-grid { grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
 
+.hero-actions {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
 @media (max-width: 960px) {
   .topbar { grid-template-columns: 1fr; align-items: start; }
   .nav-menu { display: none; flex-direction: column; width: 100%; background: #0d1220; border: 1px solid rgba(255,255,255,0.08); padding: 12px; border-radius: 12px; }
