@@ -113,4 +113,30 @@
   transform: scale(0.98);
 }
 
+.modal-content ul {
+  list-style: none;     
+  padding-left: 1.6rem;   
+  margin-bottom: 12px;
+}
+
+.modal-content li {
+  position: relative;
+  margin-bottom: 6px;
+}
+
+.modal-content li::before {
+  content: "•";
+  color: #d4af37;        
+  font-size: 1.2rem;
+  position: absolute;
+  left: -1.2rem;         
+  top: 0.1rem;
+}
+
+.modal-content .build-tags {
+  margin-top: 12px; 
+}
+
+
+
 
