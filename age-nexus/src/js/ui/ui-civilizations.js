@@ -99,9 +99,49 @@ const CivUI = (() => {
     [region, style, difficulty].forEach(el => el && el.addEventListener('change', filterFunction));
   }
 
+function bindSearch() {
+  const searchInput = document.getElementById('global-search');
+
+  if (!searchInput) return;
+
+  searchInput.addEventListener('input', () => {
+    const term = searchInput.value.toLowerCase();
+    const cards = document.querySelectorAll('.civ-card');
+
+    // Si el buscador está vacío → todas normales
+    if (term.trim() === "") {
+      cards.forEach(card => card.classList.remove("dimmed"));
+      return;
+    }
+
+    cards.forEach(card => {
+      const text = card.innerText.toLowerCase();
+      const name = card.dataset.name.toLowerCase();
+      const region = card.dataset.region.toLowerCase();
+      const style = card.dataset.style.toLowerCase();
+      const difficulty = card.dataset.difficulty.toLowerCase();
+
+      const match =
+        text.includes(term) ||
+        name.includes(term) ||
+        region.includes(term) ||
+        style.includes(term) ||
+        difficulty.includes(term);
+
+      if (match) {
+        card.classList.remove("dimmed");
+      } else {
+        card.classList.add("dimmed");
+      }
+    });
+  });
+}
+
+
   function init() {
     renderCivs(CIVILIZATIONS);
     bindFilters();
+    bindSearch(); 
     document.querySelectorAll('[data-close="civ-modal"]').forEach(btn => btn.addEventListener('click', closeModal));
     document.addEventListener('click', (e) => {
       if (e.target.id === modalId) closeModal();

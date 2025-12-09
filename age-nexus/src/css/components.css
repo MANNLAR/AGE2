@@ -103,5 +103,14 @@
   gap: 10px;  
 }
 
+.civ-card {
+  transition: opacity 0.25s ease, transform 0.25s ease;
+  opacity: 1;
+}
+
+.civ-card.dimmed {
+  opacity: 0.25;   
+  transform: scale(0.98);
+}
 
 
