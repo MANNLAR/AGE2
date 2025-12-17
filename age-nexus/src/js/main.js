@@ -135,10 +135,11 @@
     });
 
     // Maps (AJUSTA sectionId si tu section tiene otro id)
-    (MAPS || []).forEach(m => {
+   (MAPS || []).forEach(m => {
       const s = scoreMatch(query, m.name);
-      if (s) candidates.push({ s, sectionId: 'maps-modes', selector: `[data-id="${m.id}"]` });
+      if (s) candidates.push({ s, sectionId: 'mapas', selector: `[data-id="${m.id}"]` });
     });
+
 
     if (!candidates.length) return;
 
@@ -198,7 +199,7 @@
     BuildUI.init();
     renderUnits();
     bindUnitFilters();
-    MapUI.render();
+    MapUI.init();
     StatsUI.init();
     CommunityUI.init();
     bindHeroButtons();
