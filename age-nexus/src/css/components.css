@@ -1,6 +1,3 @@
-/* =========================
-   CARDS
-========================= */
 .card {
   background: var(--panel);
   border: 1px solid rgba(255,255,255,0.08);
@@ -12,164 +9,51 @@
   transition: var(--transition);
 }
 .card:hover { transform: translateY(-4px); border-color: rgba(212,175,55,0.4); }
-
-.card-media {
-  height: 250px;
-  background: #0d1220;
-  display: grid;
-  place-items: center;
-  font-weight: 700;
-  letter-spacing: 1px;
-}
-
+.card-media { height: 250px; background: #0d1220; display: grid; place-items: center; font-weight: 700; letter-spacing: 1px; }
 .card-body { padding: 16px; display: grid; gap: 10px; }
 
-/* =========================
-   ACCORDION
-========================= */
 .accordion { display: grid; gap: 10px; }
 .accordion-item { background: var(--panel); border: 1px solid rgba(255,255,255,0.1); border-radius: var(--radius); overflow: hidden; }
 .accordion-item header { padding: 14px 16px; cursor: pointer; font-weight: 700; display: flex; justify-content: space-between; align-items: center; }
 .accordion-item .accordion-body { max-height: 0; overflow: hidden; padding: 0 16px; transition: max-height 0.3s ease, padding 0.3s ease; color: var(--muted); }
 .accordion-item.active .accordion-body { max-height: 160px; padding: 12px 16px 16px; }
 
-/* =========================
-   MODAL
-========================= */
 .modal { position: fixed; inset: 0; background: rgba(0,0,0,0.65); display: none; place-items: center; padding: 16px; }
 .modal.show { display: grid; }
-
-.modal-content {
-  background: #0f1626;
-  border-radius: 14px;
-  padding: 20px;
-  max-width: 720px;
-  width: min(720px, 90vw);
-  box-shadow: var(--shadow);
-  border: 1px solid rgba(212,175,55,0.35);
-}
-
+.modal-content { background: #0f1626; border-radius: 14px; padding: 20px; max-width: 720px; width: min(720px, 90vw); box-shadow: var(--shadow); border: 1px solid rgba(212,175,55,0.35); }
 .modal-close { position: absolute; right: 16px; top: 16px; background: rgba(255,255,255,0.05); }
 
-/* Bullets dorados dentro del modal */
-.modal-content ul {
-  list-style: none;
-  padding-left: 1.6rem;
-  margin: 6px 0 12px 0;
-}
-
-.modal-content li {
-  position: relative;
-  padding-left: 0.2rem;
-  margin-bottom: 6px;
-  line-height: 1.5;
-}
-
-.modal-content li::before {
-  content: "•";
-  color: #d4af37;
-  font-size: 1.2rem;
-  position: absolute;
-  left: -1.2rem;
-  top: 0.1rem;
-}
-
-/* separa el bloque amarillo/etiquetas del contenido anterior */
-.modal-content .build-tags,
-.modal-content .tag {
-  margin-top: 12px;
-}
-
-/* =========================
-   TAGS / TABLE
-========================= */
 .tag { display: inline-flex; padding: 4px 10px; border-radius: 999px; border: 1px solid rgba(255,255,255,0.12); font-size: 0.85rem; color: var(--accent); }
 
 .table th { color: var(--accent); border-bottom: 1px solid rgba(255,255,255,0.12); }
 .table td { border-bottom: 1px solid rgba(255,255,255,0.05); }
 
-/* =========================
-   MESSAGE WALL
-========================= */
 .message { background: var(--panel); border-radius: var(--radius); padding: 12px; border: 1px solid rgba(255,255,255,0.08); display: grid; gap: 6px; }
 .message strong { color: var(--accent); }
 
-#message-form {
-  display: flex;
-  gap: 20px;
-  align-items: center;
-}
-
-#message-text {
-  position: relative;
-  top: 14px;
-  width: 420px;
-}
-
-/* =========================
-   RESULTS / QUICK ACTIONS
-========================= */
-.result {
-  margin-top: 10px;
-  padding: 12px;
-  border-radius: var(--radius);
-  border: 1px dashed rgba(255,255,255,0.2);
-  min-height: 60px;
-  display: grid;
-  align-content: center;
-  gap: 6px;
-}
+.result { margin-top: 10px; padding: 12px; border-radius: var(--radius); border: 1px dashed rgba(255,255,255,0.2); min-height: 60px; display: grid; align-content: center; gap: 6px; }
 
 .quick-actions { display: flex; flex-wrap: wrap; gap: 8px; }
 .quick-actions button { padding: 10px 14px; border: 1px solid rgba(255,255,255,0.12); background: rgba(255,255,255,0.05); border-radius: 8px; cursor: pointer; }
 
-/* =========================
-   MAP CARDS
-========================= */
 .map-card { position: relative; overflow: hidden; }
-
-/* IMPORTANTE: aquí sí usamos background-image real */
-.map-card .card-media {
-  height: 180px;
-  background-size: cover;
-  background-position: center;
-  transition: transform 0.4s ease;
-}
-
+.map-card .card-media { background-size: cover; background-position: center; height: 180px; transition: transform 0.4s ease; }
 .map-card:hover .card-media { transform: scale(1.08); }
-
-.map-overlay {
-  position: absolute;
-  inset: auto 0 0 0;
-  background: linear-gradient(180deg, transparent, rgba(0,0,0,0.75));
-  padding: 12px;
-  display: grid;
-  gap: 6px;
-}
-
+.map-overlay { position: absolute; inset: auto 0 0 0; background: linear-gradient(180deg, transparent, rgba(0,0,0,0.75)); padding: 12px; display: grid; gap: 6px; }
 .map-meta { display: flex; justify-content: space-between; font-weight: 700; }
 
-/* =========================
-   HIGHLIGHTED
-========================= */
 .highlighted { outline: 2px solid var(--accent); box-shadow: 0 0 0 6px rgba(212,175,55,0.15); }
 
-/* =========================
-   TABS / EMBLEM
-========================= */
 .tab-btn { border: 1px solid rgba(255,255,255,0.12); background: rgba(255,255,255,0.05); color: var(--muted); padding: 8px 12px; border-radius: 10px; cursor: pointer; }
 .tab-btn.active { color: var(--accent); border-color: rgba(212,175,55,0.5); }
 
 .emblem { background: rgba(139,30,30,0.18); color: #f3d87a; font-size: 1.2rem; }
 
-/* =========================
-   TEAM CARD IMAGES
-========================= */
 .card.team .card-media {
   width: 100%;
   height: 300px;
   overflow: hidden;
-  border-radius: 12px;
+  border-radius: 12px; 
 }
 
 .card.team .card-media img {
@@ -180,9 +64,6 @@
   display: block;
 }
 
-/* =========================
-   BUILD CARD LIST STYLE
-========================= */
 .card.build ul {
   list-style: none;
   padding-left: 0;
@@ -205,65 +86,55 @@
   top: 0;
 }
 
-/* =========================
-   CIV SEARCH DIM
-========================= */
+#message-text {
+  position: relative;
+  top: 14px;
+  width: 420px;
+}
+
+#message-form {
+  display: flex;
+  gap: 20px; 
+  align-items: center; 
+}
+
+.tools .card {
+  padding: 16px;
+  gap: 10px;  
+}
+
 .civ-card {
   transition: opacity 0.25s ease, transform 0.25s ease;
   opacity: 1;
 }
 
 .civ-card.dimmed {
-  opacity: 0.25;
+  opacity: 0.25;   
   transform: scale(0.98);
 }
 
-/* =========================
-   TOOLS CARD PADDING (solo tools)
-========================= */
-.tools .card {
-  padding: 16px;
-  gap: 10px;
+.modal-content ul {
+  list-style: none;     
+  padding-left: 1.6rem;   
+  margin-bottom: 12px;
 }
 
-.geo-card {
-  padding: 16px;
-  display: grid;
-  gap: 14px;
-}
-
-/* contenedor del rombo */
-.geo-media {
-  width: 120px;
-  height: 120px;
-  margin: 0 auto; /* centrado */
+.modal-content li {
   position: relative;
+  margin-bottom: 6px;
 }
 
-/* imagen romboide */
-.geo-media img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transform: rotate(45deg);
-  border-radius: 10px;
-  border: 2px solid rgba(212,175,55,0.6);
-}
-
-/* volver a enderezar el contenido interno si algún día metes texto */
-.geo-media::after {
-  content: "";
+.modal-content li::before {
+  content: "•";
+  color: #d4af37;        
+  font-size: 1.2rem;
   position: absolute;
-  inset: 8px;
-  border: 1px solid rgba(212,175,55,0.35);
-  transform: rotate(45deg);
-  border-radius: 6px;
-  pointer-events: none;
+  left: -1.2rem;         
+  top: 0.1rem;
 }
 
-.geo-body {
-  display: grid;
-  gap: 10px;
+.modal-content .build-tags {
+  margin-top: 12px; 
 }
 
 /* ---------- SECCIÓN GENERAL ---------- */
@@ -415,4 +286,3 @@
 .pretty-table tbody tr:hover {
   background: rgba(255,255,255,0.03);
 }
-.geo-card { overflow: visible; }
