@@ -1,4 +1,30 @@
 const StatsUI = (() => {
+<<<<<<< Updated upstream
+=======
+
+  function shuffle(array) {
+    return [...array].sort(() => Math.random() - 0.5);
+  }
+
+  function renderTop3(range) {
+    const container = document.getElementById('top3');
+    if (!container) return;
+
+    const top3 = shuffle(PLAYERS.winrates[range]).slice(0, 3);
+    const medals = ['🥇', '🥈', '🥉'];
+
+  container.innerHTML = top3.map((civ, i) => `
+  <div class="meta-top3-card">
+    <span class="meta-top3-medal">${medals[i]}</span>
+    <h4 class="meta-top3-title">${civ.civ}</h4>
+    <p class="meta-top3-stat">WR: <strong>${civ.wr}%</strong></p>
+    <p class="meta-top3-stat">Pico: ${civ.peak}%</p>
+  </div>
+`).join('');
+
+  }
+
+>>>>>>> Stashed changes
   function renderWinrates(range) {
     const tbody = document.querySelector('#winrate-table tbody');
     if (!tbody) return;
