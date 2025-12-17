@@ -137,6 +137,8 @@
   margin-top: 12px; 
 }
 
+.geo-card { overflow: visible; }
+
 /* ===== TOP 3 META (AISLADO) ===== */
 
 .top3-wrapper {
