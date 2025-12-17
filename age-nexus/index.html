@@ -15,6 +15,7 @@
       <div class="logo-mark" aria-hidden="true"></div>
       <span class="logo-text">AGE NEXUS</span>
     </div>
+
     <div class="topbar-actions">
       <div class="search-box">
         <input type="text" id="global-search" placeholder="Buscar civilizaciones, builds o mapas..." aria-label="Buscador global">
@@ -23,6 +24,7 @@
       <button id="theme-toggle" class="icon-btn" aria-label="Cambiar tema">&#9788;</button>
       <button id="menu-toggle" class="hamburger" aria-label="Menú principal">☰</button>
     </div>
+
     <nav id="main-nav" class="nav-menu">
       <a href="#inicio" data-section="inicio" class="nav-link">Inicio</a>
       <a href="#lore" data-section="lore" class="nav-link">Lore</a>
@@ -47,17 +49,22 @@
     </div>
   </footer>
 
-  <script src="src/js/data/civilizations.js"></script>
-  <script src="src/js/data/buildorders.js"></script>
-  <script src="src/js/data/maps.js"></script>
-  <script src="src/js/data/units.js"></script>
-  <script src="src/js/data/players.js"></script>
-  <script src="src/js/ui/ui-civilizations.js"></script>
-  <script src="src/js/ui/ui-buildorders.js"></script>
-  <script src="src/js/ui/ui-maps.js"></script>
-  <script src="src/js/ui/ui-stats.js"></script>
-  <script src="src/js/ui/ui-community.js"></script>
-  <script src="src/js/theme.js"></script>
-  <script src="src/js/main.js"></script>
+  <!-- DATA (defer respeta el orden) -->
+  <script defer src="src/js/data/civilizations.js"></script>
+  <script defer src="src/js/data/buildorders.js"></script>
+  <script defer src="src/js/data/maps.js"></script>
+  <script defer src="src/js/data/units.js"></script>
+  <script defer src="src/js/data/players.js"></script>
+
+  <!-- UI -->
+  <script defer src="src/js/ui/ui-civilizations.js"></script>
+  <script defer src="src/js/ui/ui-buildorders.js"></script>
+  <script defer src="src/js/ui/ui-maps.js"></script>
+  <script defer src="src/js/ui/ui-stats.js"></script>
+  <script defer src="src/js/ui/ui-community.js"></script>
+
+  <!-- Core -->
+  <script defer src="src/js/theme.js"></script>
+  <script defer src="src/js/main.js"></script>
 </body>
 </html>

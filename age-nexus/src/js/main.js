@@ -97,35 +97,96 @@
 
   function bindHeroButtons() {
     document.querySelectorAll('[data-scroll]').forEach(btn => {
-      btn.addEventListener('click', () => document.getElementById(btn.dataset.scroll)?.scrollIntoView({ behavior: 'smooth' }));
+      btn.addEventListener('click', () =>
+        document.getElementById(btn.dataset.scroll)?.scrollIntoView({ behavior: 'smooth' })
+      );
     });
   }
 
+  // =========================
+  // GLOBAL SEARCH (FIXED)
+  // =========================
+  function scoreMatch(q, text) {
+    const t = String(text || '').toLowerCase();
+    if (!q || !t) return 0;
+    if (t === q) return 100;         // exact match
+    if (t.startsWith(q)) return 70;  // starts with
+    if (t.includes(q)) return 40;    // contains
+    return 0;
+  }
+
   function globalSearch() {
-    const query = document.getElementById('global-search').value.toLowerCase();
+    const input = document.getElementById('global-search');
+    const query = input?.value.trim().toLowerCase();
     if (!query) return;
-    const civ = CIVILIZATIONS.find(c => c.name.toLowerCase().includes(query));
-    const build = BUILD_ORDERS.find(b => b.name.toLowerCase().includes(query));
-    const map = MAPS.find(m => m.name.toLowerCase().includes(query));
-    if (civ) { scrollToAndHighlight('civs', `[data-id="${civ.id}"]`); return; }
-    if (build) { scrollToAndHighlight('builds', `[data-name="${build.name}"]`); return; }
-    if (map) { scrollToAndHighlight('mapas', `[data-id="${map.id}"]`); return; }
+
+    const candidates = [];
+
+    // Civs
+    (CIVILIZATIONS || []).forEach(c => {
+      const s = scoreMatch(query, c.name);
+      if (s) candidates.push({ s, sectionId: 'civs', selector: `[data-id="${c.id}"]` });
+    });
+
+    // Builds
+    (BUILD_ORDERS || []).forEach(b => {
+      const s = scoreMatch(query, b.name);
+      if (s) candidates.push({ s, sectionId: 'builds', selector: `[data-name="${b.name}"]` });
+    });
+
+    // Maps (AJUSTA sectionId si tu section tiene otro id)
+   (MAPS || []).forEach(m => {
+      const s = scoreMatch(query, m.name);
+      if (s) candidates.push({ s, sectionId: 'mapas', selector: `[data-id="${m.id}"]` });
+    });
+
+
+    if (!candidates.length) return;
+
+    candidates.sort((a, b) => b.s - a.s);
+    const best = candidates[0];
+    scrollToAndHighlight(best.sectionId, best.selector);
   }
 
   function scrollToAndHighlight(sectionId, selector) {
-    const section = document.getElementById(sectionId);
-    section?.scrollIntoView({ behavior: 'smooth' });
-    setTimeout(() => {
-      const el = document.querySelector(selector);
-      if (!el) return;
+  const section = document.getElementById(sectionId);
+  if (!section) return;
+
+  // 1) Acércate a la sección
+  section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+  const OFFSET = 120;        // compensa tu topbar sticky (ajusta 110-140 si quieres)
+  const MAX_TRIES = 25;      // reintentos
+  const TRY_EVERY_MS = 120;  // cada cuánto reintenta
+
+  let tries = 0;
+
+  const tick = () => {
+    const el = document.querySelector(selector);
+
+    if (el) {
+      // 2) Scroll EXACTO al elemento con offset
+      const y = el.getBoundingClientRect().top + window.scrollY - OFFSET;
+      window.scrollTo({ top: y, behavior: 'smooth' });
+
+      // 3) Highlight
       el.classList.add('highlighted');
       setTimeout(() => el.classList.remove('highlighted'), 2000);
-    }, 400);
-  }
+      return;
+    }
+
+    tries++;
+    if (tries < MAX_TRIES) setTimeout(tick, TRY_EVERY_MS);
+  };
+
+  // espera un poco para que termine el scroll inicial / render
+  setTimeout(tick, 250);
+}
+
 
   function bindSearch() {
-    document.getElementById('search-btn').addEventListener('click', globalSearch);
-    document.getElementById('global-search').addEventListener('keydown', (e) => {
+    document.getElementById('search-btn')?.addEventListener('click', globalSearch);
+    document.getElementById('global-search')?.addEventListener('keydown', (e) => {
       if (e.key === 'Enter') { e.preventDefault(); globalSearch(); }
     });
   }
@@ -138,7 +199,7 @@
     BuildUI.init();
     renderUnits();
     bindUnitFilters();
-    MapUI.render();
+    MapUI.init();
     StatsUI.init();
     CommunityUI.init();
     bindHeroButtons();
