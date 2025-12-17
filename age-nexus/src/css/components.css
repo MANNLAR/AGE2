@@ -137,26 +137,6 @@
   margin-top: 12px; 
 }
 
-
-
-
-<<<<<<< Updated upstream
-=======
-/* ---------- SELECT ---------- */
-.fancy-select {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.fancy-select select {
-  background: #1f2340;
-  color: white;
-  border: none;
-  padding: 0.4rem 0.6rem;
-  border-radius: 8px;
-}
-
 /* ===== TOP 3 META (AISLADO) ===== */
 
 .top3-wrapper {
@@ -219,5 +199,3 @@
 .meta-top3-card:nth-child(3) {
   border: 2px solid #cd7f32;
 }
-
->>>>>>> Stashed changes
