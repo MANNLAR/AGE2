@@ -4,12 +4,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Age Nexus – Atlas Estratégico de Age of Empires</title>
+  
   <link rel="stylesheet" href="src/css/base.css">
   <link rel="stylesheet" href="src/css/layout.css">
   <link rel="stylesheet" href="src/css/components.css">
   <link rel="stylesheet" href="src/css/themes.css">
+  
+
 </head>
 <body class="theme-dark">
+
   <header class="topbar">
     <div class="logo-area">
       <div class="logo-mark" aria-hidden="true"></div>
@@ -39,7 +43,8 @@
     </nav>
   </header>
 
-  <main id="content"></main>
+  <main id="content">
+    </main>
 
   <footer class="footer">
     <div class="footer-brand">Age Nexus – Atlas Estratégico de Age of Empires</div>
@@ -49,21 +54,20 @@
     </div>
   </footer>
 
-  <!-- DATA (defer respeta el orden) -->
+  <script defer src="src/js/ui/ui-lore.js"></script> 
   <script defer src="src/js/data/civilizations.js"></script>
   <script defer src="src/js/data/buildorders.js"></script>
   <script defer src="src/js/data/maps.js"></script>
   <script defer src="src/js/data/units.js"></script>
   <script defer src="src/js/data/players.js"></script>
-
-  <!-- UI -->
+  
+  <script defer src="src/js/data/lore.js"></script>
   <script defer src="src/js/ui/ui-civilizations.js"></script>
   <script defer src="src/js/ui/ui-buildorders.js"></script>
   <script defer src="src/js/ui/ui-maps.js"></script>
   <script defer src="src/js/ui/ui-stats.js"></script>
   <script defer src="src/js/ui/ui-community.js"></script>
-
-  <!-- Core -->
+  
   <script defer src="src/js/theme.js"></script>
   <script defer src="src/js/main.js"></script>
 </body>

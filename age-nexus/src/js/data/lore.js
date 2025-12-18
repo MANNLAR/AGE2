@@ -1,4 +1,4 @@
-const LORE_DATA = [
+window.LORE_DATA = [
 {
   id: 'francos',
   nombre: 'Francos',
@@ -398,7 +398,7 @@ const LORE_DATA = [
       texto: 'El Imperio Jemer comenzó a declinar a partir del siglo XV debido a conflictos internos, presiones externas y cambios ambientales. Sin embargo, su legado perdura en monumentos como Angkor Wat, testimonio de su grandeza.'
     }
   ]
-},
+}
 
 
 ];

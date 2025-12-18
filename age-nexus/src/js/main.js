@@ -193,6 +193,9 @@
 
   async function init() {
     await loadSections();
+    if (window.initLore) {
+      window.initLore();
+    }
     bindNavigation();
     initAccordion();
     CivUI.init();
