@@ -2,7 +2,6 @@
   const SECTION_FILES = [
     'section-home.html',
     'section-lore.html',
-    'section-campaigns.html',
     'section-civilizations.html',
     'section-buildorders.html',
     'section-units-techs.html',
