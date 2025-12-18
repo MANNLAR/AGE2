@@ -372,12 +372,12 @@
 
 .lore-scope {
   /* Variables Globales de la Sección */
-  --lore-bg: #121119;
+  --lore-bg: #12111b;
   --lore-card-bg: #1f2937;
   --lore-accent: #eecc56;
   --lore-accent-glow: rgba(59, 130, 246, 0.3);
   --lore-border: rgba(148, 163, 184, 0.15);
-  --lore-text-main: #f1f5f9;
+  --lore-text-main: #000000;
   --lore-text-dim: #94a3b8;
   --lore-font: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
   
@@ -385,7 +385,7 @@
   background-color: var(--lore-bg);
   color: var(--lore-text-main);
   padding: 5rem 1.5rem;
-  background-image: radial-gradient(circle at 50% 0%, rgba(30, 58, 138, 0.2) 0%, transparent 50%);
+  
 }
 
 /* ===================== HEADER ===================== */
