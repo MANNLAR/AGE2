@@ -17,7 +17,7 @@ function makeMap(m) {
 
     // contenido
     description: m.description ?? '',
-    image: m.image ?? `src/assets/img/maps/map-${m.id}.jpg`,
+    image: m.image ?? `src/assets/img/Maps/rm_${m.id}.png`,
     strong: m.strong ?? { civ: '—', winrate: '—' },
     weak: m.weak ?? { civ: '—', winrate: '—' },
     builds: Array.isArray(m.builds) ? m.builds : []
@@ -36,7 +36,6 @@ const MAPS = [
     water: 'sin',
     duration: 'media',
     description: 'Mapa abierto con colinas. Presión temprana constante.',
-    image: 'src/assets/img/maps/map-arabia.jpg',
     strong: { civ: 'Francos', winrate: 54 },
     weak: { civ: 'Aztecas', winrate: 46 },
     builds: ['Scout Rush', 'Archer Rush']
@@ -52,7 +51,6 @@ const MAPS = [
     water: 'sin',
     duration: 'media',
     description: 'Abierto con elevaciones. Control de colinas.',
-    image: 'src/assets/img/maps/map-acropolis.jpg',
     strong: { civ: 'Hunos', winrate: 53 },
     weak: { civ: 'Bengalíes', winrate: 47 },
     builds: ['Scouts → Knights', 'Archers']
@@ -68,7 +66,6 @@ const MAPS = [
     water: 'sin',
     duration: 'media',
     description: 'Abierto con fauna agresiva. Decisiones rápidas.',
-    image: 'src/assets/img/maps/map-serengeti.jpg',
     strong: { civ: 'Magiares', winrate: 52 },
     weak: { civ: 'Godos', winrate: 48 },
     builds: ['Scout Rush']
@@ -84,7 +81,6 @@ const MAPS = [
     water: 'sin',
     duration: 'media',
     description: 'Abierto con recursos dispersos.',
-    image: 'src/assets/img/maps/map-atacama.jpg',
     strong: { civ: 'Mayas', winrate: 53 },
     weak: { civ: 'Persas', winrate: 47 },
     builds: ['Archer Rush']
@@ -100,7 +96,6 @@ const MAPS = [
     water: 'sin',
     duration: 'media',
     description: 'Terreno caótico y agresivo.',
-    image: 'src/assets/img/maps/map-landmadness.jpg',
     strong: { civ: 'Aztecas', winrate: 52 },
     weak: { civ: 'Godos', winrate: 48 },
     builds: ['Drush']
@@ -116,7 +111,6 @@ const MAPS = [
     water: 'parcial',
     duration: 'media',
     description: 'Oro central. Peleas tempranas.',
-    image: 'src/assets/img/maps/map-goldrush.jpg',
     strong: { civ: 'Lituanos', winrate: 54 },
     weak: { civ: 'Godos', winrate: 46 },
     builds: ['Fast Castle Knights']
@@ -132,7 +126,6 @@ const MAPS = [
     water: 'sin',
     duration: 'media',
     description: 'Oro central rodeado de colinas.',
-    image: 'src/assets/img/maps/map-goldpit.jpg',
     strong: { civ: 'Lituanos', winrate: 54 },
     weak: { civ: 'Godos', winrate: 46 },
     builds: ['Fast Castle Knights']
@@ -148,7 +141,6 @@ const MAPS = [
     water: 'sin',
     duration: 'media',
     description: 'Mapa abierto con piedra cercana.',
-    image: 'src/assets/img/maps/map-runestones.jpg',
     strong: { civ: 'Britanos', winrate: 54 },
     weak: { civ: 'Godos', winrate: 46 },
     builds: ['Archer Rush']
@@ -164,7 +156,6 @@ const MAPS = [
     water: 'sin',
     duration: 'media',
     description: 'Valles y colinas pronunciadas.',
-    image: 'src/assets/img/maps/map-valley.jpg',
     strong: { civ: 'Incas', winrate: 52 },
     weak: { civ: 'Hunos', winrate: 48 },
     builds: ['Defensive Boom']
@@ -180,7 +171,6 @@ const MAPS = [
     water: 'sin',
     duration: 'media',
     description: 'Terreno plano con colinas aisladas.',
-    image: 'src/assets/img/maps/map-steppe.jpg',
     strong: { civ: 'Cumanos', winrate: 53 },
     weak: { civ: 'Teutones', winrate: 47 },
     builds: ['Double Stable Scouts']
@@ -197,7 +187,6 @@ const MAPS = [
     water: 'sin',
     duration: 'media',
     description: 'Bosques cerrando el mapa. Boom seguro.',
-    image: 'src/assets/img/maps/map-hideout.jpg',
     strong: { civ: 'Mayas', winrate: 54 },
     weak: { civ: 'Hunos', winrate: 46 },
     builds: ['Fast Castle', 'Boom 3 TC']
@@ -213,7 +202,6 @@ const MAPS = [
     water: 'sin',
     duration: 'larga',
     description: 'Inicio con murallas y castillos.',
-    image: 'src/assets/img/maps/map-fortress.jpg',
     strong: { civ: 'Teutones', winrate: 54 },
     weak: { civ: 'Hunos', winrate: 46 },
     builds: ['Fast Imperial']
@@ -229,7 +217,6 @@ const MAPS = [
     water: 'sin',
     duration: 'larga',
     description: 'Muros de piedra. Boom y monjes.',
-    image: 'src/assets/img/maps/map-arena.jpg',
     strong: { civ: 'Aztecas', winrate: 57 },
     weak: { civ: 'Francos', winrate: 48 },
     builds: ['Drush FC', 'Monks + Siege']
@@ -245,7 +232,6 @@ const MAPS = [
     water: 'sin',
     duration: 'larga',
     description: 'Pasillos cerrados y choke points.',
-    image: 'src/assets/img/maps/map-blackforest.jpg',
     strong: { civ: 'Teutones', winrate: 54 },
     weak: { civ: 'Hunos', winrate: 46 },
     builds: ['Boom 4 TC']
@@ -262,7 +248,6 @@ const MAPS = [
     water: 'parcial',
     duration: 'larga',
     description: 'Inicio disperso. Adaptación constante.',
-    image: 'src/assets/img/maps/map-nomad.jpg',
     strong: { civ: 'Jemeres', winrate: 55 },
     weak: { civ: 'Etíopes', winrate: 49 },
     builds: ['Fast Castle']
@@ -278,7 +263,6 @@ const MAPS = [
     water: 'parcial',
     duration: 'media',
     description: 'Control de lagos tempranos.',
-    image: 'src/assets/img/maps/map-fourlakes.jpg',
     strong: { civ: 'Vikingos', winrate: 55 },
     weak: { civ: 'Búlgaros', winrate: 47 },
     builds: ['Water Feudal']
@@ -294,7 +278,6 @@ const MAPS = [
     water: 'dominante',
     duration: 'larga',
     description: 'Islas y costas amplias.',
-    image: 'src/assets/img/maps/map-baltic.jpg',
     strong: { civ: 'Vikingos', winrate: 54 },
     weak: { civ: 'Godos', winrate: 46 },
     builds: ['Galleys']
@@ -310,7 +293,6 @@ const MAPS = [
     water: 'dominante',
     duration: 'larga',
     description: 'Naval puro.',
-    image: 'src/assets/img/maps/map-islands.jpg',
     strong: { civ: 'Italianos', winrate: 56 },
     weak: { civ: 'Godos', winrate: 45 },
     builds: ['Fast Feudal Water']
@@ -327,7 +309,6 @@ const MAPS = [
     water: 'sin',
     duration: 'media',
     description: 'Mapa abierto con espacios amplios y lectura sencilla del terreno.',
-    image: 'src/assets/img/maps/map-african-clearing.jpg',
     strong: { civ: 'Magiares', winrate: 52 },
     weak: { civ: 'Teutones', winrate: 48 },
     builds: ['Scout Rush', 'Archer Rush']
@@ -343,7 +324,6 @@ const MAPS = [
     water: 'sin',
     duration: 'media',
     description: 'Mapa amplio y relativamente seguro. Favorece eco sólida.',
-    image: 'src/assets/img/maps/map-lombardia.jpg',
     strong: { civ: 'Persas', winrate: 52 },
     weak: { civ: 'Mayas', winrate: 48 },
     builds: ['Fast Castle', 'Boom 3 TC']
@@ -359,7 +339,6 @@ const MAPS = [
     water: 'sin',
     duration: 'media',
     description: 'Bases elevadas con defensas naturales.',
-    image: 'src/assets/img/maps/map-hillfort.jpg',
     strong: { civ: 'Teutones', winrate: 53 },
     weak: { civ: 'Hunos', winrate: 47 },
     builds: ['Fast Castle', 'Defensive Boom']
@@ -375,7 +354,6 @@ const MAPS = [
     water: 'sin',
     duration: 'larga',
     description: 'Pasillo central muy estrecho. Late game intenso.',
-    image: 'src/assets/img/maps/map-amazon-tunnel.jpg',
     strong: { civ: 'Teutones', winrate: 53 },
     weak: { civ: 'Hunos', winrate: 47 },
     builds: ['Full Boom', 'Fast Imperial']
@@ -391,7 +369,6 @@ const MAPS = [
     water: 'parcial',
     duration: 'media',
     description: 'Mapa híbrido con agua relevante.',
-    image: 'src/assets/img/maps/map-highland.jpg',
     strong: { civ: 'Vikingos', winrate: 53 },
     weak: { civ: 'Godos', winrate: 47 },
     builds: ['Hybrid Opening', 'Water Feudal']
