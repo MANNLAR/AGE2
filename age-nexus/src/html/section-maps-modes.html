@@ -1,0 +1,70 @@
+<section id="mapas" class="section">
+  <div class="section-header">
+    <p class="eyebrow">Mapas & Modos</p>
+    <h2>Geografías dominadas</h2>
+    <p>Cuándo presionar, qué civ abusar y builds sugeridas.</p>
+  </div>
+
+  <!-- Filtros principales -->
+  <div class="filters" id="map-filters-main">
+    <button class="tab-btn active" data-type="all">Todos</button>
+    <button class="tab-btn" data-type="abierto">Abierto</button>
+    <button class="tab-btn" data-type="cerrado">Cerrado</button>
+
+    <label class="tag" style="display:inline-flex; gap:10px; align-items:center;">
+      <input type="checkbox" id="map-competitive-only" />
+      Solo competitivos
+    </label>
+
+    <button class="tab-btn" id="map-advanced-toggle" type="button">Filtros avanzados</button>
+    <button class="tab-btn" id="map-clear-filters" type="button">Limpiar filtros</button>
+  </div>
+
+  <!-- Avanzados (colapsable) -->
+  <div class="card" id="map-filters-advanced" style="display:none; padding:16px; margin-bottom:16px;">
+    <div class="card-body" style="padding:0; gap:14px;">
+
+      <div class="filters">
+        <span class="tag">Formato</span>
+        <button class="tab-btn" data-format="1v1">1v1</button>
+        <button class="tab-btn" data-format="2v2">2v2</button>
+        <button class="tab-btn" data-format="3v3">3v3</button>
+        <button class="tab-btn" data-format="4v4">4v4</button>
+      </div>
+
+      <div class="filters">
+        <span class="tag">Economía</span>
+        <button class="tab-btn" data-economy="estandar">Estándar</button>
+        <button class="tab-btn" data-economy="nomada">Nómada</button>
+      </div>
+
+      <div class="filters">
+        <span class="tag">Agua</span>
+        <button class="tab-btn" data-water="sin">Sin agua</button>
+        <button class="tab-btn" data-water="parcial">Parcial</button>
+        <button class="tab-btn" data-water="dominante">Dominante</button>
+      </div>
+
+      <div class="filters">
+        <span class="tag">Duración</span>
+        <button class="tab-btn" data-duration="corta">Corta</button>
+        <button class="tab-btn" data-duration="media">Media</button>
+        <button class="tab-btn" data-duration="larga">Larga</button>
+      </div>
+
+      <small style="color: var(--muted);">
+        Tip: puedes combinar filtros (ej. 2v2 + Agua dominante + Duración larga). Haz click otra vez para quitar un filtro.
+      </small>
+    </div>
+  </div>
+
+  <div class="grid" id="map-grid"></div>
+
+  <!-- Modal de builds por mapa -->
+  <div class="modal" id="map-modal" aria-hidden="true">
+    <div class="modal-content">
+      <button class="btn ghost modal-close" type="button" data-close="map-modal">✕</button>
+      <div id="map-detail"></div>
+    </div>
+  </div>
+</section>
